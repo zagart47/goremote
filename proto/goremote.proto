@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+service RemoteControl {
+  rpc GetScreenshot (ScreenshotRequest) returns (stream ScreenshotResponse) {}
+}
+
+message ScreenshotRequest {
+  string victim = 1;
+}
+
+message ScreenshotResponse {
+  bytes chunk = 1;
+  string error = 2;
+}
+
+option go_package = "/;proto";

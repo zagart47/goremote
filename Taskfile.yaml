@@ -1,0 +1,9 @@
+version: "3"
+
+tasks:
+  generate:
+    aliases:
+      - gen
+    desc: "Generate from proto"
+    cmds:
+      - protoc --go_out=proto --go-grpc_out=proto proto/goremote.proto

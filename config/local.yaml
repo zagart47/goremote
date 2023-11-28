@@ -1,0 +1,5 @@
+env: "local"
+storage_path: "./storage/goremote.db"
+grpc:
+  port: 11111
+  timeout: 10h
